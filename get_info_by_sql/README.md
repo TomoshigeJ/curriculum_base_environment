@@ -1,19 +1,19 @@
 ## コンテナイメージのビルド
 ```
-$ docker build . -t sql-practice
+$ docker build . -t get_info_by_sql
 ```
 
 ## コンテナ作成&起動(初回だけ)
 ビルドしたコンテナイメージからコンテナを起動
 3306ポートを疏通
 ```
-$ docker run -d --name sql-practice -p 3306:3306 sql-practice
+$ docker run -d --name get_info_by_sql -p 3306:3306 get_info_by_sql
 ```
 
 ## コンテナ内に入る
 コンテナ内のシェルを起動
 ```
-$ docker exec -it sql-practice bash
+$ docker exec -it get_info_by_sql bash
 
 ```
 
@@ -60,17 +60,17 @@ mysql> exit
 ## コンテナの停止
 ※ ローカルで実行
 ```
-$ docker stop sql-practice
+$ docker stop get_info_by_sql
 ```
 
 ## コンテナの削除
 コンテナが停止した状態で
 ```
-$ docker rm sql-practice
+$ docker rm get_info_by_sql
 ```
 
 ## コンテナイメージの削除
 コンテナが削除された状態で
 ```
-$ docker rmi sql-practice mysql:5.7
+$ docker rmi get_info_by_sql mysql:5.7
 ```
