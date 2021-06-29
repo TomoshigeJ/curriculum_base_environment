@@ -1,3 +1,8 @@
+## 作業ディレクトリに移動
+```
+$ cd get_info_by_sql
+```
+
 ## コンテナイメージのビルド
 ```
 $ docker build . -t get_info_by_sql
